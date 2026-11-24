@@ -27,7 +27,8 @@ export default function Inbox() {
   return (
     <div>
       <header className="topbar">
-        <h2>Messages</h2>
+         <h2>Messages</h2>
+         <button className="icon-btn" onClick={() => navigate("/settings")} aria-label="Settings">⚙</button>
       </header>
 
       {status === "loading" && <p className="center muted">Loading conversations...</p>}
