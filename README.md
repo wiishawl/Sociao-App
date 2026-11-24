@@ -10,15 +10,13 @@ The project focuses on building a complete social networking experience while im
 
 Watch a walkthrough of Sociao showcasing its interface, features, and user interactions.
 
-[![Sociao - Application Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Sociao - Application Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://youtu.be/_607MVwAUkE)
 
-*Replace `YOUR_VIDEO_ID` with your YouTube video ID after uploading the demo.*
 
 ## Features
 
 - **User Authentication:** User registration and login.
 - **Home Feed:** Browse posts shared by users.
-- **User Profiles:** View profile information, posts, followers, and following.
 - **Stories:** Display user stories based on available posts.
 - **Like Posts:** Like and unlike posts with persistent interaction counts.
 - **Save Posts:** Save and unsave posts.
@@ -85,7 +83,7 @@ sociao/
 └── README.md
 ```
 
-*The structure is representative; individual filenames may vary.*
+
 
 ## Demo Accounts
 
@@ -191,30 +189,5 @@ The issue appears to be related to integrating video playback within the applica
 
 The comment count is displayed, but full comment interaction is not yet implemented.
 
-## Security and Privacy
 
-- User passwords should never be stored in plain text.
-- Passwords should be securely hashed by the backend.
-- JWT secrets and environment variables must remain private.
-- Never commit real user credentials, API keys, or access tokens.
-- Local databases, virtual environments, and uploaded personal files should be excluded from Git where appropriate.
 
-**Demo account warning:** The credentials listed above are for disposable testing accounts only. Remove or change them before using the application in a production environment.
-
-## Future Improvements
-
-- Complete video playback integration.
-- Implement a fully functional commenting system.
-- Expand messaging functionality.
-- Improve profile customization.
-- Further enhance responsive design and user experience.
-
-## Author
-
-**Vishaladitya Valluru**
-
-Built as a full-stack development project to explore frontend development, backend API design, database integration, authentication, and interactive application development.
-
----
-
-*Sociao — Connect, share, and interact.*
