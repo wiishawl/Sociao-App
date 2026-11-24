@@ -10,7 +10,7 @@ The project focuses on building a complete social networking experience while im
 
 Watch a walkthrough of Sociao showcasing its interface, features, and user interactions.
 
-[![Sociao - Application Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://youtu.be/_607MVwAUkE)
+[![Social - Application Demo](https://img.youtube.com/vi/_607MVwAUkE/maxresdefault.jpg)](https://youtu.be/_607MVwAUkE)
 
 
 ## Features
@@ -188,6 +188,12 @@ The issue appears to be related to integrating video playback within the applica
 ### Comments
 
 The comment count is displayed, but full comment interaction is not yet implemented.
+
+### What the AI got wrong, and how it was caught
+
+- Routes silently missing. Several backend files (auth_routes.py, users_routes.py) ended up without their routes, and main.py was missing include_router lines for posts and messages. The symptom was 404 Not Found on login, followers and inbox. It was caught by reading the server log and by printing the API's registered paths with app.openapi()['paths'], which showed /auth/* was not registered at all. The fix was supplying full replacement files instead of partial edits.
+- Wrong edit placement in React. One suggested change put return createPortal( in the middle of JSX, and in Profile a hook (useLocation) was used before its declaration. Both were caught by the browser console error and by comparing against the exact line numbers.
+- External sample videos. The seeded video URLs are public sample links that do not load on every network, so video posts can show a black preview. This is a data issue, not an app bug. Uploading your own video through Create works.
 
 
 
